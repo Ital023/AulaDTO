@@ -48,7 +48,7 @@ public class UserService {
         entity.setDescription(dto.getDescription());
         entity.setPassword(dto.getPassword());
         entity.setEmail(dto.getEmail());
-        entity.setImg_url(dto.getImg_url());
+        entity.setImgUrl(dto.getImgUrl());
     }
 
 }

@@ -6,21 +6,21 @@ public class UserMinDTO {
 
     private Long id;
     private String username;
-    private String img_url;
+    private String imgUrl;
 
     public UserMinDTO() {
     }
 
-    public UserMinDTO(Long id, String username, String img_url) {
+    public UserMinDTO(Long id, String username, String imgUrl) {
         this.id = id;
         this.username = username;
-        this.img_url = img_url;
+        this.imgUrl = imgUrl;
     }
 
     public UserMinDTO(User entity) {
         this.id = entity.getId();
         this.username = entity.getUsername();
-        this.img_url = entity.getImg_url();
+        this.imgUrl = entity.getImgUrl();
     }
 
     public Long getId() {
@@ -31,7 +31,7 @@ public class UserMinDTO {
         return username;
     }
 
-    public String getImg_url() {
-        return img_url;
+    public String getImgUrl() {
+        return imgUrl;
     }
 }

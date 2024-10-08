@@ -17,18 +17,18 @@ public class User {
 
     private String password;
     private String email;
-    private String img_url;
+    private String imgUrl;
 
     public User() {
     }
 
-    public User(Long id, String username, String description, String password, String email, String img_url) {
+    public User(Long id, String username, String description, String password, String email, String imgUrl) {
         this.id = id;
         this.username = username;
         this.description = description;
         this.password = password;
         this.email = email;
-        this.img_url = img_url;
+        this.imgUrl = imgUrl;
     }
 
     public Long getId() {
@@ -71,11 +71,11 @@ public class User {
         this.email = email;
     }
 
-    public String getImg_url() {
-        return img_url;
+    public String getImgUrl() {
+        return imgUrl;
     }
 
-    public void setImg_url(String img_url) {
-        this.img_url = img_url;
+    public void setImgUrl(String imgUrl) {
+        this.imgUrl = imgUrl;
     }
 }

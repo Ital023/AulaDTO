@@ -23,18 +23,18 @@ public class CreateUserDTO {
     @Email
     private String email;
 
-    private String img_url;
+    private String imgUrl;
 
     public CreateUserDTO() {
     }
 
-    public CreateUserDTO(Long id, String username, String description, String password, String email, String img_url) {
+    public CreateUserDTO(Long id, String username, String description, String password, String email, String imgUrl) {
         this.id = id;
         this.username = username;
         this.description = description;
         this.password = password;
         this.email = email;
-        this.img_url = img_url;
+        this.imgUrl = imgUrl;
     }
 
     public CreateUserDTO(User entity) {
@@ -43,7 +43,7 @@ public class CreateUserDTO {
         this.description = entity.getDescription();
         this.password = entity.getPassword();
         this.email = entity.getEmail();
-        this.img_url = entity.getImg_url();
+        this.imgUrl = entity.getImgUrl();
     }
 
     public Long getId() {
@@ -66,7 +66,7 @@ public class CreateUserDTO {
         return email;
     }
 
-    public String getImg_url() {
-        return img_url;
+    public String getImgUrl() {
+        return imgUrl;
     }
 }

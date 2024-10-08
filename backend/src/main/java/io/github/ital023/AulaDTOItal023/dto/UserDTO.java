@@ -8,17 +8,17 @@ public class UserDTO {
     private String username;
     private String description;
     private String email;
-    private String img_url;
+    private String imgUrl;
 
     public UserDTO() {
     }
 
-    public UserDTO(Long id, String username, String description, String email, String img_url) {
+    public UserDTO(Long id, String username, String description, String email, String imgUrl) {
         this.id = id;
         this.username = username;
         this.description = description;
         this.email = email;
-        this.img_url = img_url;
+        this.imgUrl = imgUrl;
     }
 
     public UserDTO(User entity) {
@@ -26,7 +26,7 @@ public class UserDTO {
         this.username = entity.getUsername();
         this.description = entity.getDescription();
         this.email = entity.getEmail();
-        this.img_url = entity.getImg_url();
+        this.imgUrl = entity.getImgUrl();
     }
 
     public Long getId() {
@@ -45,7 +45,7 @@ public class UserDTO {
         return email;
     }
 
-    public String getImg_url() {
-        return img_url;
+    public String getImgUrl() {
+        return imgUrl;
     }
 }
