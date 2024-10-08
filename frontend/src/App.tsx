@@ -1,14 +1,16 @@
-import logo from "../src/assets/logo.png"
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import Home from "./routes/Home";
+import HomeBody from "./routes/Home/HomeBody";
 
 export default function App() {
   return (
-    <>
-      <header className="h-20 flex justify-center content-center dark:bg-darkMode-tertiary border-b-2">
-        <div className="container px-4 flex flex-row items-center justify-between h-full ">
-          
-        <img src={logo} alt="logo" className="max-h-16"/>
-        </div>
-      </header>
-    </>
+    <BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Home />}>
+        <Route index element={<Navigate to="home" />} />
+        <Route path="home" element={<HomeBody />} />
+      </Route>
+    </Routes>
+    </BrowserRouter>
   );
 }
