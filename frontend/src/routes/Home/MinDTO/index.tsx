@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
 import CardMinDTO from "../../../components/CardMinDTO";
+import * as userService from "../../../services/user-service"
 import { UserMinDTO } from "../../../models/UserMinDTO";
-import * as productService from "../../../services/product-service"
+
 
 export default function MinDTO() {
 
-  const[usersMinDTO, setUsersMinDTO] = useState<UserMinDTO[]>([]);
+  const [usersMinDTO, setUsersMinDTO] = useState<UserMinDTO[]>([]);
 
-  useEffect(() => {
-    productService.findMinAll().then((response) => {
+  useEffect(()=>{
+    userService.findMinAll()
+    .then((response) => {
       setUsersMinDTO(response.data);
-      console.log(response.data);
-      
     })
   },[])
 
@@ -21,9 +21,7 @@ export default function MinDTO() {
       <div className="grid grid-cols-4 justify-items-center gap-y-10">
         {
           usersMinDTO.map((user) => (
-            <CardMinDTO user={user} key={user.id}/>
-      
-            
+            <CardMinDTO user={user} key={user.id} />
           ))
         }
       </div>

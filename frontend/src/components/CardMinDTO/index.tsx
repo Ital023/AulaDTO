@@ -1,8 +1,9 @@
 import { UserMinDTO } from "../../models/UserMinDTO";
 
 type Props = {
-  user: UserMinDTO;
+  user: UserMinDTO
 }
+
 
 export default function CardMinDTO({user} : Props) {
   return (
