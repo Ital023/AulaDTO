@@ -35,18 +35,14 @@ Parte 2: Front-end [clique aqui](https://youtu.be/Yw4TwGho320?si=Sz2yGSMTO8p00IH
   
 
 # Rotas
-&#9679;	Eventos
+&#9679;	Users
 
 | Método | Caminho                      | Descrição                                           |
 | ------ | ---------------------------- | -------------------------------------------------- |
-| PUT    | /events/{id}                 | Atualiza os dados de um evento específico pelo ID.	 |
+| GET	    | /users	               | Retorna uma lista de todos os usuários.		 |
+| GET	    | /users/minDTO	               | Retorna uma lista reduzida de informações dos usuários.			 |
+| POST		    | /users	               |	Adiciona um novo usuário.		 |
 
-&#9679;	Empregados
-| Método | Caminho                      | Descrição                                           |
-| ------ | ---------------------------- | -------------------------------------------------- | 
-| GET    | /cities             | Retorna uma lista de todas as cidades, ordenadas pelo nome.             | 
-| POST   | /cities                   |	Adiciona uma nova cidade.                              |
-| DELETE   | /cities/{id}	                   |		Remove uma cidade específica pelo ID.                            |
 
 
 # Como executar o projeto
@@ -60,6 +56,20 @@ git clone https://github.com/Ital023/DSCommerce.git
 
 # executar o projeto
 ./mvnw spring-boot:run
+```
+
+## Front end web
+Pré-requisitos: npm / yarn
+
+```bash
+# clonar repositório
+git clone https://github.com/Ital023/AulaDTO.git
+
+# instalar dependências
+yarn install
+
+# executar o projeto
+yarn start
 ```
 
 ## 🤝 Colaboradores
